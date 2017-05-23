@@ -151,10 +151,15 @@ this.returnCar = function(customerID) {
   }
 };
 
-// Not able to figure out revenue function portion ):
+this.totalRevenue = function () {
+  return this.cars.reduce(function(prevSum, currCar){
+    console.log(prevSum, currCar);
+    return prevSum + (currCar.rentalDuration * currCar.rentalPricePerDay);
+  }, 0);
+};
+};
 
-// this.totalRevenue = function () {
-// }
+
 
 // Codes you can run to test your code
 var customerInfo = {
